@@ -51,6 +51,11 @@ body{
   font-weight: 500;
 }
 
+header{
+  position: fixed;
+  width: 100vw;
+}
+
 header .container{
   text-transform: capitalize;
 
@@ -98,6 +103,16 @@ header ul a:hover{
   color: #000;
 }
 
+header .right ul li a.call-sub:after{
+  content: '';
+  top: 58%;
+  width: 3%;
+  height: 25px;
+  position: absolute;
+  display: block;
+}
+
+
 header .pop-up .title{
   text-transform: uppercase;
   color: #CED5DB;
@@ -115,7 +130,7 @@ header .pop-up > .sub-menu{
   border-radius: 5px;
   box-shadow: 0px 6px 16px #CED5DB;
   padding: 20px;
-  position: fixed;
+  position: absolute;
 
   flex-direction: column;
   display: none;
@@ -167,4 +182,8 @@ svg{
   padding: 3px;
   border-radius: 50%;
   margin-right: 5px;
+}
+
+header .pop-up .sub-menu.active{
+  display: flex;
 }
