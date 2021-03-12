@@ -115,19 +115,35 @@ header .pop-up > .sub-menu{
   border-radius: 5px;
   box-shadow: 0px 6px 16px #CED5DB;
   padding: 20px;
+  position: fixed;
 
   flex-direction: column;
   display: none;
 }
 
 
-header .pop-up .funzionalita{
+header .pop-up [name=funzionalita]{
   width: 900px;
   top: 85px;
   right: 389px;
 
   flex-direction: row;
   justify-content: space-between;
+}
+
+header .pop-up [name=abbonamenti]{
+  top: 85px;
+  right: 43%;
+}
+
+header .pop-up [name=chi]{
+  top: 85px;
+  right: 36%;
+}
+
+header .pop-up [name=aiuto]{
+  top: 85px;
+  right: 32%;
 }
 
 header .pop-up ul{
@@ -151,9 +167,4 @@ svg{
   padding: 3px;
   border-radius: 50%;
   margin-right: 5px;
-}
-
-header .pop-up .active{
-  position: fixed;
-  display: flex;
 }

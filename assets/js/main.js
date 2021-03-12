@@ -1,19 +1,25 @@
-var funzionalitaBtn = $('header .right a.funzionalita');
-var funzionalitaPop = $('header .right .pop-up div.funzionalita')
 
-funzionalitaBtn.mouseenter(function() {
-  funzionalitaPop.addClass('active');
+var callSub = $('header .right a.call-sub');
+
+callSub.mouseenter(function() {
+  var name = $(this).attr('name');
+  var subMenu = $('header .right .pop-up .sub-menu[name=' + name + ']');
+  subMenu.fadeIn('').css("display", "flex");
 })
 
-funzionalitaPop.mouseenter(function() {
-  funzionalitaPop.addClass('active');
+callSub.mouseleave(function() {
+  var name = $(this).attr('name');
+  var subMenu = $('header .right .pop-up .sub-menu[name=' + name + ']');
+  subMenu.fadeOut('').css("display", "flex");
 })
 
 
-funzionalitaBtn.mouseleave(function() {
-  funzionalitaPop.delay(8000).removeClass('active');
+var subMenu = $('header .right .pop-up .sub-menu');
+
+subMenu.mouseenter(function() {
+  $(this).fadeIn('').css("display", "flex");
 })
 
-funzionalitaPop.mouseleave(function() {
-  funzionalitaPop.removeClass('active');
+subMenu.mouseleave(function() {
+  $(this).fadeOut('').css("display", "flex");
 })
