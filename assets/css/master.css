@@ -265,4 +265,10 @@ header .pop-up .sub-menu.active{
 .jumbo form .btn{
   padding: 20px 0px;
   width: 148px;
+  opacity: 0.75;
+  color: #fff;
+}
+
+jumbo form .btn-active{
+  opacity: 1;
 }

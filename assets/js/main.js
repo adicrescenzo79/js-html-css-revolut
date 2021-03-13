@@ -1,5 +1,6 @@
 $(document).ready(function(){
   popUpMenu();
+  btnActivate();
 })
 
 
@@ -28,5 +29,18 @@ function popUpMenu(){
 
   subMenu.mouseleave(function() {
     $(this).removeClass('active');
+  })
+}
+
+function btnActivate(){
+  var btn = $('form .btn');
+  var tel = $('form [type=tel]');
+  if (tel.length > 0) {
+    btn.prop('disabled', false).addClass('btn-active');
+    console.log(tel.length);
+  }
+
+  btn.click( function(){
+    console.log(tel.length);
   })
 }
