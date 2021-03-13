@@ -6,6 +6,7 @@
 .debug .funzionalita{
   background-color: blue;
 }
+
 /* GENERAL */
 body{
   font-family: 'Roboto', sans-serif;
@@ -16,6 +17,11 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container{
+  max-width: 100%;
+  width: 67%;
 }
 
 .btn{
@@ -45,15 +51,17 @@ body{
   color: #000;
 }
 
-
 .black{
   color: #000;
   font-weight: 500;
 }
 
+/* HEADER */
 header{
   position: fixed;
   width: 100vw;
+  box-shadow: 0px 6px 16px #CED5DB;
+  background-color: #fff;
 }
 
 header .container{
@@ -112,6 +120,14 @@ header .right ul li a.call-sub:after{
   display: block;
 }
 
+header svg{
+  width: 25px;
+  background-color: #CED5DB;
+  color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
 
 header .pop-up .title{
   text-transform: uppercase;
@@ -123,19 +139,16 @@ header .pop-up .title{
   align-items: center;
 }
 
-
-
-
 header .pop-up > .sub-menu{
   border-radius: 5px;
   box-shadow: 0px 6px 16px #CED5DB;
   padding: 20px;
   position: absolute;
+  background-color: #fff;
 
   flex-direction: column;
   display: none;
 }
-
 
 header .pop-up [name=funzionalita]{
   width: 900px;
@@ -175,15 +188,81 @@ header .pop-up ul li{
 
 }
 
-svg{
-  width: 25px;
-  background-color: #CED5DB;
-  color: #fff;
-  padding: 3px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
 header .pop-up .sub-menu.active{
   display: flex;
+}
+
+/* JUMBO */
+.jumbo{
+  padding-top: 250px;
+  font-size: 18px;
+  color: #A3A4A5;
+  font-weight: 400;
+}
+
+.jumbo .content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbo .content > div{
+  width: 45%;
+}
+
+.jumbo h1{
+  font-size: 76px;
+  font-weight: 700;
+}
+
+.jumbo p{
+  line-height: 1.5em;
+  margin-top: 25px;
+}
+
+.jumbo form{
+  margin-top: 50px;
+}
+
+.jumbo form select{
+  border: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #D6D7D7;
+  width: 100px;
+  outline: none;
+  padding-bottom: 5px;
+  margin-right: 15px;
+  transition: border-bottom 2s;
+}
+
+.jumbo form input[type=tel]{
+  color: #000;
+  width: 160px;
+  padding-bottom: 5px;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: border-bottom 2s;
+}
+
+.jumbo form input[type=tel]::placeholder{
+  color: #D6D7D7;
+  font-weight: 400;
+}
+
+.jumbo form input[type=tel]:focus,
+.jumbo form select:focus{
+  border-bottom: 5px solid #0074E9;
+}
+
+.jumbo form input{
+  border: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #D6D7D7;
+  width: 80px;
+  font-weight: 700;
+  outline: none;
+}
+
+.jumbo form .btn{
+  padding: 20px 0px;
+  width: 148px;
 }
