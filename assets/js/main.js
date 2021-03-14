@@ -1,6 +1,7 @@
 $(document).ready(function(){
   popUpMenu();
-  btnActivate();
+  openNotice();
+  closeNotice();
 })
 
 
@@ -32,15 +33,16 @@ function popUpMenu(){
   })
 }
 
-function btnActivate(){
-  var btn = $('form .btn');
-  var tel = $('form [type=tel]');
-  if (tel.length > 0) {
-    btn.prop('disabled', false).addClass('btn-active');
-    console.log(tel.length);
-  }
+function openNotice(){
+  var notice = $('footer .notice');
+  notice.slideDown();
+}
 
-  btn.click( function(){
-    console.log(tel.length);
+function closeNotice(){
+  var close = $('footer .notice .close');
+  var notice = $('footer .notice');
+
+  close.click(function(){
+    notice.attr('style', 'display:none');
   })
 }

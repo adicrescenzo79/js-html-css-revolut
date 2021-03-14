@@ -153,7 +153,7 @@ header .pop-up > .sub-menu{
 header .pop-up [name=funzionalita]{
   width: 900px;
   top: 85px;
-  right: 389px;
+  right: 17%;
 
   flex-direction: row;
   justify-content: space-between;
@@ -161,17 +161,17 @@ header .pop-up [name=funzionalita]{
 
 header .pop-up [name=abbonamenti]{
   top: 85px;
-  right: 43%;
+  right: 40%;
 }
 
 header .pop-up [name=chi]{
   top: 85px;
-  right: 36%;
+  right: 33%;
 }
 
 header .pop-up [name=aiuto]{
   top: 85px;
-  right: 32%;
+  right: 29%;
 }
 
 header .pop-up ul{
@@ -184,8 +184,29 @@ header .pop-up ul{
 
 header .pop-up ul li{
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px;3
+  position: relative;
+}
 
+header .pop-up ul li .soon{
+  color: #CED5DB;
+}
+
+header .pop-up ul li .soon:after{
+  content: 'PROSSIMAMENTe';
+  text-transform: uppercase;
+  color: #0074E9;
+  position: absolute;
+  font-size: 8px;
+}
+header .pop-up ul li .soon-1:after{
+  right: 54%;
+  top: 62%;
+}
+
+header .pop-up ul li .soon-2:after{
+  right: 13%;
+  top: 76%;
 }
 
 header .pop-up .sub-menu.active{
@@ -269,6 +290,48 @@ header .pop-up .sub-menu.active{
   color: #fff;
 }
 
-jumbo form .btn-active{
-  opacity: 1;
+footer .notice{
+  box-shadow: 0px 6px 16px #CED5DB;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  width: 450px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  display: none;
+}
+
+footer .notice a{
+  text-decoration: none;
+}
+
+footer .notice .content{
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .notice svg{
+  width: 40px;
+  color: #0074E9;
+}
+
+footer .notice{
+  line-height: 25px;
+  color: #A3A4A5;
+}
+
+footer .notice .close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #A3A4A5;
+  cursor: pointer;
+}
+
+footer .notice .close:hover{
+  color: #000;
 }
